@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Threat Inspector",
+    "description": "Analyze IPs, URLs, and file hashes with VirusTotal, AbuseIPDB, urlscan.io, and Joe Sandbox.",
+    "version": "4.1",
+    "permissions": ["storage"],
+    "host_permissions": [
+      "https://www.virustotal.com/*",
+      "https://api.abuseipdb.com/*",
+      "https://urlscan.io/*",
+      "https://www.joesandbox.com/*"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    }
+  }
+  

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Threat Inspector PRO</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    html, body {
+      min-width: 410px !important;
+      max-width: 410px !important;
+      width: 410px !important;
+      min-height: 590px !important;
+      box-sizing: border-box;
+      overflow-x: hidden !important;
+    }
+  </style>
+</head>
+<body class="bg-dark">
+  <div class="container py-3">
+    <h3 class="text-center mb-3 fw-bold" style="letter-spacing:1px;">
+      <span class="text-info">Threat Inspector</span> <span class="text-warning">V1.0</span>
+    </h3>
+    <ul class="nav nav-tabs mb-3" id="tabMenu" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="analyze-tab" data-bs-toggle="tab" data-bs-target="#analyze" type="button" role="tab">Analyze</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab">Settings</button>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="analyze" role="tabpanel">
+        <form id="ioc-form" autocomplete="off" class="mb-3">
+          <div class="mb-2">
+            <label for="ioc-input" class="form-label">Indicator (IP, URL, Hash):</label>
+            <input type="text" class="form-control" id="ioc-input" autocomplete="off" spellcheck="false" required maxlength="150" placeholder="e.g. 8.8.8.8, example.com, d41d8cd9..., user@email.com">
+          </div>
+          <button type="submit" class="btn btn-info w-100 fw-bold shadow-sm">Analyze</button>
+        </form>
+        <div id="status"></div>
+        <div id="results" class="mt-2"></div>
+      </div>
+      <div class="tab-pane fade" id="settings" role="tabpanel">
+        <form id="settings-form" autocomplete="off" class="mb-2">
+          <div class="mb-2">
+            <label for="vt-key" class="form-label">VirusTotal API Key (optional)</label>
+            <input type="password" class="form-control" id="vt-key" maxlength="100">
+          </div>
+          <div class="mb-2">
+            <label for="abuseipdb-key" class="form-label">AbuseIPDB API Key (optional)</label>
+            <input type="password" class="form-control" id="abuseipdb-key" maxlength="100">
+          </div>
+          <div class="mb-2">
+            <label for="phishtank-key" class="form-label">PhishTank API Key (optional)</label>
+            <input type="password" class="form-control" id="phishtank-key" maxlength="100">
+          </div>
+          <div class="mb-2">
+            <label for="urlscan-key" class="form-label">urlscan.io API Key (optional)</label>
+            <input type="password" class="form-control" id="urlscan-key" maxlength="100">
+          </div>
+          <button type="submit" class="btn btn-success w-100 shadow-sm">Save</button>
+        </form>
+        <div id="settings-status"></div>
+        <div class="form-text text-info mt-3">
+          API keys are stored locally and are optional. If not set, searches use public web portals.
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
