@@ -6,7 +6,7 @@
 
 ## Features
 
-- Analyze IP addresses, URLs, file hashes, and emails.
+- Analyze IP addresses, URLs, and file hashes.
 - Integrated with multiple threat intelligence services:
   - VirusTotal (optional API key)
   - AbuseIPDB (optional API key)
@@ -38,7 +38,7 @@
 
 ## How It Works
 
-1. Enter an indicator (IP, URL, hash, or email) in the main field.
+1. Enter an indicator (IP, URL, hash) in the main field.
 2. Click "Analyze".
 3. The extension queries supported services and displays results in dedicated cards.
 4. Use the "Settings" tab to securely store API keys and enable advanced lookups.
