@@ -1,5 +1,6 @@
-# Threat Inspector Chrome Extension
+![Threat Inspector Banner](images/threat-inspector.png.png)
 
+# Threat Inspector Chrome Extension
 **Threat Inspector** is a Chrome extension for security analysts and SOC teams. It allows you to rapidly analyze Indicators of Compromise (IoCs) such as IP addresses, URLs, file hashes across multiple OSINT sources, all in a single, user-friendly interface.
 
 ---
